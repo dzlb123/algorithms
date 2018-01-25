@@ -3,6 +3,7 @@ package com.dzlb.algorithms.chapter01;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+
 /**
  * Created by Administrator on 2017/12/28.
  */
@@ -72,6 +73,10 @@ public class MyTest01 {
         StdOut.println((1+2+3+4.0));//10.0
         StdOut.println((4.1 >= 4));//true
         StdOut.println((1+2+"3"));//"33"
+    }
+
+    public void testall(){
+
     }
 
 }
