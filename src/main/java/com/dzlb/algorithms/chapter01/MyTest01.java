@@ -3,19 +3,33 @@ package com.dzlb.algorithms.chapter01;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.io.*;
+
 
 /**
  * Created by Administrator on 2017/12/28.
  */
 public class MyTest01 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
         question118();
     }
-    private static void question118(){
-        System.out.println('b');
-        System.out.println('b' + 'c');
-        System.out.println((char)('b' + 4));
+    private static void question118() throws Exception {
+        File file = new File("d://test.txt");
+        FileReader reader = new FileReader(file);
+        BufferedReader br = new BufferedReader(reader);
+        StringBuilder sb = new StringBuilder();
+        sb.append("delete from cenpur_mall_account where user_id in (");
+        String line = "";
+        while((line = br.readLine()) != null){
+            sb.append("'");
+            sb.append(line);
+            sb.append("',");
+        }
+        sb.deleteCharAt(sb.lastIndexOf(","));
+        sb.append(")");
+        line = sb.toString();
+        StdOut.println(line);
 
     }
 
