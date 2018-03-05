@@ -29,7 +29,7 @@ public class SortCompare {
         if(alg.equals(INSERTION)){Insertion.sort(a);}
         if(alg.equals(SELECTION)){Selection.sort(a);}
         if(alg.equals(BUBBLE)){Bubble.sort(a);}
-        if(alg.equals(SHELL)){}
+        if(alg.equals(SHELL)){Shell.sort(a);}
         if(alg.equals(MERGE)){}
         if(alg.equals(QUICK)){}
         if(alg.equals(HEAP)){}
@@ -59,7 +59,7 @@ public class SortCompare {
 
 
     public static void main(String[] args){
-        String alg1 = INSERTION;//args[0];
+        String alg1 = SHELL;//args[0];
         String alg2 = BUBBLE;//args[1];
         int N = 5000;//Integer.parseInt(args[2]);
         int T = 100;//Integer.parseInt(args[3]);
