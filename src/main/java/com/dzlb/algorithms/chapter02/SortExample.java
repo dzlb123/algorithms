@@ -20,6 +20,15 @@ public class SortExample {
     protected static boolean less(Comparable v,Comparable w){
         return v.compareTo(w) < 0;
     }
+    /**
+     * compare , if v > w ,return true
+     * @param v
+     * @param w
+     * @return
+     */
+    protected static boolean greater(Comparable v,Comparable w){
+        return v.compareTo(w) > 0;
+    }
 
     /**
      * exchange index i's value  and index j's value in array a
@@ -50,12 +59,23 @@ public class SortExample {
      * @return
      */
     protected static boolean isSorted(Comparable[] a){
+        boolean flag = true;
         for(int i=1;i<a.length;i++){
             if(less(a[i],a[i-1])) {
-                return false;
+                flag = false;
+                break;
             }
         }
-        return true;
+        if(!flag){
+            flag = true;
+            for(int i=1;i<a.length;i++){
+                if(!less(a[i],a[i-1])) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        return flag;
     }
 
 }
